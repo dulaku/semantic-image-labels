@@ -227,7 +227,7 @@ class DataLoader(keras.utils.Sequence):
       imgarr.crop((left, top, right, bottom))
 
       # Rescale
-      imgarr = imgarr.resize((299, 299), resample=PIL.Image.BILINEAR)
+      imgarr = imgarr.resize(self.dim, resample=PIL.Image.BILINEAR)
 
       # Vary contrast
       if self.max_contrast_var is not 0.0:
@@ -252,11 +252,12 @@ class DataLoader(keras.utils.Sequence):
 
       # Add RGB color shift
       if self.max_rgb_shift > 0:
-        shifts = (numpy.random.rand(3) - 0.5 * 2)
+        shifts = (numpy.random.rand(self.n_channels) - 0.5 * 2)
         shifts = numpy.rint(shifts * self.max_rgb_shift)
-        shift_vec = numpy.empty([299, 299, 3])
-        for p in range(299):
-          for q in range(299):
+        shift_vec = numpy.empty([self.dim[0], self.dim[1], self.n_channels])
+        # TODO: Replace with the appropriate invocation of numpy.tile()
+        for p in range(self.dim[0]):
+          for q in range(self.dim[1]):
             shift_vec[p][q] = shifts
         imgarr = imgarr + shift_vec
 
@@ -264,7 +265,10 @@ class DataLoader(keras.utils.Sequence):
       if self.max_rgb_noise > 0:
         # Random, 0-centered noise
         noise_volume = random.random() * self.max_rgb_noise
-        noise_vec = (numpy.random.rand(299, 299, 3) - 0.5) * 2 * noise_volume
+        noise_vec = numpy.random.rand(self.dim[0],
+                                      self.dim[1],
+                                      self.n_channels)
+        noise_vec = (noise_vec - 0.5) * 2 * noise_volume
         noise_vec = numpy.rint(noise_vec)
         imgarr = imgarr + noise_vec
 

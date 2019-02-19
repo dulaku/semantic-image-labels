@@ -7,6 +7,8 @@ This repository includes a model that trained for 14 epochs; this cutoff was arb
 # Training Results
 
 Some sample results showing how classifications evolved through training for a few different images:
+
+
 Epoch | The Good | The Bad | The Weird
 ----- | -------- | ------- | ---------
  | ![Red-Breasted Merganser Bird](/ImgPredictions/0/37_red-breasted merganser bird:potter's wheel.png) | ![Submarine](/ImgPredictions/0/3_submarine:potter's wheel.png) | ![American Lobster](/ImgPredictions/0/6_American lobster:potter's wheel.png) 

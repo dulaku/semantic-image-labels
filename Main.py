@@ -100,7 +100,7 @@ train_data = DataLoader.get_train_loader(args['train_dir'])
 validation_data = DataLoader.get_val_loader(args['valid_dir'])
 
 try:
-  base_model = keras.models.load_model(args['load'])
+  model = keras.models.load_model(args['load'])
 except:
   print("Backed up model unavailable, starting fresh...")
   base_model = keras.applications.inception_resnet_v2.InceptionResNetV2(
@@ -108,12 +108,12 @@ except:
     weights=None
   )
 
-outlayer = base_model.output
-outlayer = keras.layers.GlobalAveragePooling2D()(outlayer)
-outlayer = keras.layers.Dense(300, activation='linear')(outlayer)
+  outlayer = base_model.output
+  outlayer = keras.layers.GlobalAveragePooling2D()(outlayer)
+  outlayer = keras.layers.Dense(300, activation='linear')(outlayer)
 
-model = keras.Model(inputs=base_model.input,
-                    outputs=outlayer)
+  model = keras.Model(inputs=base_model.input,
+                      outputs=outlayer)
 
 optim = keras.optimizers.Nadam()
 decode = DataLoader.Decoder()
