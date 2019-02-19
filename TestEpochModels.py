@@ -5,20 +5,6 @@ import os, gc
 
 import DataLoader
 
-import matplotlib.pyplot
-
-x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-y = [1265, 6663, 13070, 18230, 22136, 22774, 25399, 26313, 27548, 27863, 28657,
-     28558, 29964, 30017]
-matplotlib.pyplot.plot(x, y)
-matplotlib.pyplot.xlabel('Epoch')
-matplotlib.pyplot.ylabel('Correct Predictions')
-matplotlib.pyplot.ylim([0, 49792])
-matplotlib.pyplot.show()
-
-import sys
-sys.exit()
-
 docstring = "Train an instance of Inception-ResNet V2 for regression instead " \
             "of classification. Instead of classes, the targets are vectors " \
             "derived from GloVe vectors for the human-readable labels for " \
