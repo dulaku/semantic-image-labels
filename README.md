@@ -2,7 +2,7 @@
 
 This proof-of-concept generates output vectors for each input image. The targets for regression are derived from GloVe vectors for the human-readable labels of each class. 
 
-This repository includes a model that trained for 14 epochs; this cutoff was arbitrarily selected in order to free up the GPU for other work, so there's probably still some improvement in store. The model has a top-1 validation accuracy of about 60.3%.
+A model is available [here](https://drive.google.com/open?id=1bEBAp7XkrjPM6NjkqUXTR0TyPRdH-QcM) that was trained for 14 epochs; this cutoff was arbitrarily selected in order to free up the GPU for other work, so there's probably still some improvement in store. The model has a top-1 validation accuracy of about 60.3%.
 
 # Training Results
 
@@ -11,7 +11,7 @@ Some sample results showing how classifications evolved through training for a f
 
 Epoch | The Good | The Bad | The Weird
 ----- | -------- | ------- | ---------
-N/A | ![Red-Breasted Merganser Bird](/ImgPredictions/0/37_red-breasted merganser bird:potter's wheel.png) | ![Submarine](/ImgPredictions/0/3_submarine:potter's wheel.png) | ![American Lobster](/ImgPredictions/0/6_American lobster:potter's wheel.png) 
+N/A | ![Red-Breasted Merganser Bird](/MiscImages/bird_small.png) | ![Submarine](/MiscImages/submarine_small.png) | ![American Lobster](/MiscImages/lobsters_small.png) 
 0 | potter's wheel | potter's wheel | potter's wheel
 1 | great egret bird | yellow lady's slipper orchid | yellow lady's slipper orchid
 2 | red-breasted merganser bird | hand plane | yellow lady's slipper orchid
