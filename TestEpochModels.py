@@ -5,11 +5,6 @@ import os, gc
 
 import DataLoader
 
-docstring = "Train an instance of Inception-ResNet V2 for regression instead " \
-            "of classification. Instead of classes, the targets are vectors " \
-            "derived from GloVe vectors for the human-readable labels for " \
-            "each class."
-
 parser = argparse.ArgumentParser(description=docstring)
 parser.add_argument('--load_dir',
                     help='Directory containing models to be tested.',
