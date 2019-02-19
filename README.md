@@ -11,7 +11,7 @@ Some sample results showing how classifications evolved through training for a f
 
 Epoch | The Good | The Bad | The Weird
 ----- | -------- | ------- | ---------
- | ![Red-Breasted Merganser Bird](/ImgPredictions/0/37_red-breasted merganser bird:potter's wheel.png) | ![Submarine](/ImgPredictions/0/3_submarine:potter's wheel.png) | ![American Lobster](/ImgPredictions/0/6_American lobster:potter's wheel.png) 
+N/A | ![Red-Breasted Merganser Bird](/ImgPredictions/0/37_red-breasted merganser bird:potter's wheel.png) | ![Submarine](/ImgPredictions/0/3_submarine:potter's wheel.png) | ![American Lobster](/ImgPredictions/0/6_American lobster:potter's wheel.png) 
 0 | potter's wheel | potter's wheel | potter's wheel
 1 | great egret bird | yellow lady's slipper orchid | yellow lady's slipper orchid
 2 | red-breasted merganser bird | hand plane | yellow lady's slipper orchid
