@@ -8,7 +8,7 @@ A model is available [here](https://drive.google.com/open?id=1bEBAp7XkrjPM6NjkqU
 
 This is a proof-of-concept linking NLP word embeddings and classic computer vision classification. This is something I'm hoping will be a step toward more robust computer vision, as we try to build networks that are better at handling novel inputs - for example, I'd like classifiers that can output something along the lines of "This is a dog, but not a breed I've seen before".
 
-OF course, on its own, it's not very interesting - it's actually kind of a garbage classifier compared to the Inception-Resnet V2 network it was based on, and all it really establishes is that word embedding vectors are distinct enough that they can be distinguished from one another (which we already knew). On the other hand, it does have the advantage that its outputs are interpretable - there's an obvious metric comparing any given output to the known inputs the network was trained on.
+Of course, on its own, it's not very interesting - it's actually kind of a garbage classifier compared to the Inception-Resnet V2 network it was based on, and all it really establishes is that word embedding vectors are distinct enough that they can be distinguished from one another (which we already knew). On the other hand, it does have the advantage that its outputs are interpretable - there's an obvious metric comparing any given output to the known inputs the network was trained on.
 
 # Training Results
 
