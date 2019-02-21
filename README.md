@@ -10,7 +10,7 @@ This is a proof-of-concept linking NLP word embeddings and classic computer visi
 
 Of course, on its own, it's not very interesting - it's actually kind of a garbage classifier compared to the Inception-Resnet V2 network it was based on, and all it really establishes is that word embedding vectors are distinct enough that they can be distinguished from one another (which we already knew). On the other hand, it does have the advantage that its outputs are interpretable - there's an obvious metric comparing any given output to the known inputs the network was trained on.
 
-It's probably also highly-related to image captioning work that's already been done. Need to read up on that.
+It's probably also highly-related to image captioning work that's already been done. Need to read up on that, and would appreciate any suggestions.
 
 # Training Results
 
